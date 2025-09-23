@@ -5,7 +5,7 @@ type MainProps = {
   placeCardsPerPageCount: number;
 }
 
-function Main({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Element {
+function MainScreen({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className='header'>
@@ -112,4 +112,4 @@ function Main({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Element {
   );
 }
 
-export default Main;
+export default MainScreen;
