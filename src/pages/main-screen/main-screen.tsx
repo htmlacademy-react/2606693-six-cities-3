@@ -2,11 +2,10 @@ import Logo from '../../components/logo/logo';
 import PlaceCard from '../../components/place-card/place-card';
 
 type MainProps = {
-  placesCount: number;
-  placeCardsPerPageCount: number;
+  placeCardsCount: number;
 }
 
-function MainScreen({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Element {
+function MainScreen({ placeCardsCount }: MainProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -74,7 +73,7 @@ function MainScreen({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Ele
           <div className="cities__places-container  container">
             <section className="cities__places  places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">{placesCount} places to stay in Amsterdam</b>
+              <b className="places__found">312 places to stay in Amsterdam</b>
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 {' '}
@@ -93,7 +92,7 @@ function MainScreen({ placesCount, placeCardsPerPageCount }: MainProps): JSX.Ele
               </form>
               <div className="cities__places-list  places__list  tabs__content">
                 {
-                  Array.from({ length: placeCardsPerPageCount }, () => (
+                  Array.from({ length: placeCardsCount }, () => (
                     <PlaceCard key={crypto.randomUUID()} />
                   ))
                 }

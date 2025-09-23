@@ -10,8 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App
-      placesCount={Setting.PlacesCount}
-      placeCardsPerPageCount={Setting.PlaceCardsPerPageCount}
+      placeCardsCount={Setting.PlaceCardsCount}
     />
   </React.StrictMode>
 );

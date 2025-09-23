@@ -8,11 +8,10 @@ import NotFoundScreen from '../../pages/not-found-screen/not-found-screen';
 import OfferScreen from '../../pages/offer-screen/offer-screen';
 
 type AppProps = {
-  placesCount: number;
-  placeCardsPerPageCount: number;
+  placeCardsCount: number;
 }
 
-function App({ placesCount, placeCardsPerPageCount }: AppProps): JSX.Element {
+function App({ placeCardsCount }: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -20,8 +19,7 @@ function App({ placesCount, placeCardsPerPageCount }: AppProps): JSX.Element {
           path={AppRoute.Main}
           element={
             <MainScreen
-              placesCount={placesCount}
-              placeCardsPerPageCount={placeCardsPerPageCount}
+              placeCardsCount={placeCardsCount}
             />
           }
         />
